@@ -17,7 +17,7 @@ ur = [(i,j) for i,j in product(A,repeat = 2)]
 print("Total pairs in Universal relation R = ", len(ur))
 print("Universal relation of R= " + str(ur))
 
-R1 = [(i,j) for i,j in product(A,repeat=2) if i%j == 0]
+R1 = [(i,j) for i,j in product(A,repeat=2) if j%i == 0]
 R2 = [(i,j) for i,j in product(A,repeat=2) if i<=j]
 
 print("Total pairs in Relation R1 = ", len(R1))

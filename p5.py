@@ -5,7 +5,7 @@ def intersection(mat1, mat2):
     intersect = []
     for i in range(len(mat1)):
         row = []
-        for j in range(len(mat1[0])):
+        for j in range(len(mat1)):
             row.append(mat1[i][j] and mat2[i][j])
         intersect.append(row)
     return intersect
@@ -14,7 +14,7 @@ def union(mat1, mat2):
     uni = []
     for i in range(len(mat1)):
         row = []
-        for j in range(len(mat1[i])):
+        for j in range(len(mat1)):
             row.append(mat1[i][j] or mat2[i][j])
         uni.append(row)   
     return uni
@@ -37,7 +37,7 @@ mis = np.array(mi).reshape(3, 3)
 # r1 = [(v[i], v[j]) for i in range(len(mi)) for j in range(len(mi[0])) if mi[i][j] == 1]
 r1 = []
 for i in range(len(mi)):
-    for j in range(len(mi[0])):
+    for j in range(len(mi)):
         if mi[i][j] == 1:
            r1.append((v[i], v[j])) 
           
@@ -49,7 +49,7 @@ mus = np.array(mu).reshape(3, 3)
 # r2 = [(v[i], v[j]) for i in range(len(mu)) for j in range(len(mu[0])) if mu[i][j] == 1]
 r2 = []
 for i in range(len(mu)):
-    for j in range(len(mu[0])):
+    for j in range(len(mu)):
         if mu[i][j] == 1:
             r2.append((v[i],v[j]))
 print("Matrix Union = \n", mus)
